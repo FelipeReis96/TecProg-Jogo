@@ -13,6 +13,12 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
+include_directories(include)
+
+add_compile_definitions(PROJECT_ROOT="${CMAKE_SOURCE_DIR}")
+
+file(GLOB_RECURSE sources CONFIGURE_DEPENDS src/*.cpp)
+
 add_executable(main ${sources})
 target_link_libraries(main PRIVATE sfml-graphics sfml-audio)
 target_compile_features(main PRIVATE cxx_std_17)
