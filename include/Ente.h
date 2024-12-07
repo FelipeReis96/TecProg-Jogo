@@ -1,16 +1,17 @@
 #pragma once
+#include "gerenciadores/Gerenciador_Grafico.h"
 
-#include "Gerenciador_Grafico.h"
 
 class Ente {
-protected:  
+protected:
     const int id;
-    static Gerenciador_Grafico* pGG;
+    static gerenciadores::Gerenciador_Grafico* pGG; 
+
 public:
     Ente();
     ~Ente();
 
     virtual void executar() = 0;
     void desenhar();
-
 };
+

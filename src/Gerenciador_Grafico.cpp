@@ -1,3 +1,3 @@
-#include "Gerenciador_Grafico.h"
+#include "gerenciadores/Gerenciador_Grafico.h"
 
 
