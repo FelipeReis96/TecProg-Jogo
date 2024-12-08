@@ -1,6 +1,7 @@
-#include <iostream>
+#include "Jogo.h"
+#include "Ente.h"
 
 int main() {
-    std::cout << "Hello, world!" << std::endl;
+    Jogo j;
     return 0;
 }
