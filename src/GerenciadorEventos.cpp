@@ -1,29 +1,32 @@
 #include "gerenciadores/GerenciadorEventos.hpp"
 
 namespace gerenciadores {
-GerenciadorEventos::GerenciadorEventos() {
+GerenciadorEventos* GerenciadorEventos::instancia = nullptr;  
 
+GerenciadorEventos* GerenciadorEventos::getInstancia() {
+    if(instancia == nullptr) {
+        instancia = new GerenciadorEventos();
+    }
+    return instancia;
+}
+
+GerenciadorEventos::GerenciadorEventos() {
+    pGG = GerenciadorGrafico::getInstancia();
 }
 
 GerenciadorEventos::~GerenciadorEventos() {
-
+    delete pGG;
+    pGG = nullptr;
 }
 
-void GerenciadorEventos::gerenciar() {
-    if (pGG) {
-        sf::Event evento;
-        while (pGG->getJanela()->pollEvent(evento)) {
-            switch (evento.type) {
-
-                    case sf::Event::Closed:
-                        pGG->getJanela()->close();
-                        break;      
-                    }
-
-                    
+void GerenciadorEventos::executar() {
+    while (pGG->getJanela()->pollEvent(evento)) {
+        if(evento.type == sf::Event::Closed) {
+             pGG->close();
         }
     }
 }
+
 
 }
 

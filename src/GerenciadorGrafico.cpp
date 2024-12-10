@@ -1,9 +1,10 @@
 #include "gerenciadores/GerenciadorGrafico.hpp"
 
 namespace gerenciadores {
-
+    
+GerenciadorGrafico* GerenciadorGrafico::instancia = nullptr;
 GerenciadorGrafico::GerenciadorGrafico()
-    : pJanela(nullptr) {  // Inicializa como nullptr
+    {  // Inicializa como nullptr
     setVideoMode();
     setJanela();
 }
@@ -12,7 +13,7 @@ GerenciadorGrafico::~GerenciadorGrafico() {
     if (pJanela) {
         delete pJanela;
     }
-    pJanela = NULL;
+    pJanela = nullptr;
 }
 
 void GerenciadorGrafico::setJanela() {
@@ -21,7 +22,8 @@ void GerenciadorGrafico::setJanela() {
         pJanela->close();
         delete pJanela;
     }
-    pJanela = new sf::RenderWindow(videoMode, "teste",sf::Style::Default);
+    pJanela = new sf::RenderWindow(videoMode, "teste");
+    printf("setJanela");
 }
 
 sf::RenderWindow* GerenciadorGrafico::getJanela() const {
@@ -34,15 +36,18 @@ void GerenciadorGrafico::setVideoMode(){
 }
 void GerenciadorGrafico::clear() {
     if (janelaAberta()) {
-        if (pJanela)
-        pJanela->clear(sf::Color::White);
+        pJanela->clear(sf::Color::Black);
     }
 }
  // namespace gerenciadores
 void GerenciadorGrafico::close() {
-    if(janelaAberta) {
-        if (pJanela) 
+    if(janelaAberta()) {
         pJanela->close();
     }
 }
+void GerenciadorGrafico::display() {
+    if(janelaAberta())
+        pJanela->display();
+}
+
 }

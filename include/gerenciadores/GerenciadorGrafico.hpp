@@ -13,10 +13,13 @@ namespace gerenciadores {
         sf::RenderWindow* pJanela;
         std::map<std::string, sf::Texture> texturas;
         sf::VideoMode videoMode;
+        static GerenciadorGrafico* instancia;
+        GerenciadorGrafico();
 
     public:
-        GerenciadorGrafico();
         ~GerenciadorGrafico();
+
+        static GerenciadorGrafico* getInstancia();
 
         void setVideoMode();
         void setJanela();

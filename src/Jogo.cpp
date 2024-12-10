@@ -3,8 +3,8 @@
 
 
 Jogo::Jogo() {
-    pGG = new gerenciadores::GerenciadorGrafico();
-    pGE = new gerenciadores::GerenciadorEventos();
+    pGG = gerenciadores::GerenciadorGrafico::getInstancia();
+    pGE = gerenciadores::GerenciadorEventos::getInstancia();
     executar();
 }
 
@@ -14,11 +14,10 @@ Jogo::~Jogo() {
 }
 
 void Jogo::executar() {
-    if (pGG) {
-        while(pGG->getJanela()->isOpen()) {
-            pGG->getJanela()->clear(sf::Color::White);
-            pGG->getJanela()->display();
-        }
+    while (pGG->janelaAberta()) {
+       pGG->clear();
+       pGE->executar();
+       pGG->display();
 
     }
 }

@@ -8,10 +8,12 @@ namespace gerenciadores {
     class GerenciadorEventos {
     private:
         GerenciadorGrafico* pGG;
-        GerenciadorInput* pI;
-    public:
+        static GerenciadorEventos* instancia;
+        sf::Event evento;
         GerenciadorEventos();
+    public:
         ~GerenciadorEventos();
-        void gerenciar();
+        void executar();
+        static GerenciadorEventos* getInstancia();
     };
 }
