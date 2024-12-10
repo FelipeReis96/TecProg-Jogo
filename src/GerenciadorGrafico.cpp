@@ -1,4 +1,4 @@
-#include "gerenciadores/Gerenciador_Grafico.h"
+#include "gerenciadores/GerenciadorGrafico.hpp"
 
 namespace gerenciadores {
 

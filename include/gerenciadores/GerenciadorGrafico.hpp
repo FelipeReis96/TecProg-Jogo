@@ -7,7 +7,7 @@
 
 class Ente;
 namespace gerenciadores {
-    class Gerenciador_Grafico {
+    class GerenciadorGrafico {
     private:
         int id;
         sf::RenderWindow* pJanela;
@@ -15,8 +15,8 @@ namespace gerenciadores {
         sf::VideoMode videoMode;
 
     public:
-        Gerenciador_Grafico();
-        ~Gerenciador_Grafico();
+        GerenciadorGrafico();
+        ~GerenciadorGrafico();
 
         void setVideoMode();
         void setJanela();
@@ -24,5 +24,9 @@ namespace gerenciadores {
         bool janelaAberta() const {
             return pJanela->isOpen();
         }
+        void display();
+        void clear();
+        void close();
+        
     };  
 }

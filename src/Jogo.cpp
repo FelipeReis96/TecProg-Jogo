@@ -1,5 +1,5 @@
-#include "gerenciadores/Gerenciador_Grafico.h"
-#include "Jogo.h"
+#include "gerenciadores/GerenciadorGrafico.hpp"
+#include "Jogo.hpp"
 
 
 Jogo::Jogo() {
