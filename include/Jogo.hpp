@@ -7,8 +7,8 @@
 
 class Jogo {
 private:
-    gerenciadores::Gerenciador_Grafico* pGG;
-    gerenciadores::GerenciarEventos pGE;
+    gerenciadores::GerenciadorGrafico* pGG;
+    gerenciadores::GerenciadorEventos* pGE;
 public:
     Jogo();
     ~Jogo();

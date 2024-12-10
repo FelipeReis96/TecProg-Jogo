@@ -1,19 +1,19 @@
 #include "gerenciadores/GerenciadorInput.hpp"
 
 namespace gerenciadores {
-    Gerenciador_Input::Gerenciador_Input() {
+    GerenciadorInput::GerenciadorInput() {
 
     }
 
-    Gerenciador_Input::~Gerenciador_Input() {
+    GerenciadorInput::~GerenciadorInput() {
 
     }
 
-    void Gerenciador_Input::pressedInput(sf::Event::KeyEvent& key) {
+    void GerenciadorInput::pressedInput(sf::Event::KeyEvent& key) {
 
     }
 
-    void Gerenciador_Input::releasedInput(sf::Event::KeyEvent& key) {
+    void GerenciadorInput::releasedInput(sf::Event::KeyEvent& key) {
 
     }
 }

@@ -27,6 +27,5 @@ namespace gerenciadores {
         void display();
         void clear();
         void close();
-        
-    };  
+    };
 }

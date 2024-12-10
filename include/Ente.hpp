@@ -6,7 +6,7 @@ class Ente {
 protected:
     const int id;
     static int contador;
-    static gerenciadores::Gerenciador_Grafico* pGG; 
+    static gerenciadores::GerenciadorGrafico* pGG; 
     static sf::Texture textura;
 
 public:

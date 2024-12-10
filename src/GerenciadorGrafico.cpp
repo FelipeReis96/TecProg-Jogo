@@ -2,20 +2,20 @@
 
 namespace gerenciadores {
 
-Gerenciador_Grafico::Gerenciador_Grafico()
+GerenciadorGrafico::GerenciadorGrafico()
     : pJanela(nullptr) {  // Inicializa como nullptr
     setVideoMode();
     setJanela();
 }
 
-Gerenciador_Grafico::~Gerenciador_Grafico() {
+GerenciadorGrafico::~GerenciadorGrafico() {
     if (pJanela) {
         delete pJanela;
     }
     pJanela = NULL;
 }
 
-void Gerenciador_Grafico::setJanela() {
+void GerenciadorGrafico::setJanela() {
     // Exemplo de reconfiguração (caso necessário)
     if (pJanela) {
         pJanela->close();
@@ -24,13 +24,25 @@ void Gerenciador_Grafico::setJanela() {
     pJanela = new sf::RenderWindow(videoMode, "teste",sf::Style::Default);
 }
 
-sf::RenderWindow* Gerenciador_Grafico::getJanela() const {
+sf::RenderWindow* GerenciadorGrafico::getJanela() const {
     return pJanela; // Retorna a referência à janela
 }
 
-void Gerenciador_Grafico::setVideoMode(){
+void GerenciadorGrafico::setVideoMode(){
     videoMode.width = LARGURA;
     videoMode.height = ALTURA;
 }
+void GerenciadorGrafico::clear() {
+    if (janelaAberta()) {
+        if (pJanela)
+        pJanela->clear(sf::Color::White);
+    }
+}
  // namespace gerenciadores
+void GerenciadorGrafico::close() {
+    if(janelaAberta) {
+        if (pJanela) 
+        pJanela->close();
+    }
+}
 }

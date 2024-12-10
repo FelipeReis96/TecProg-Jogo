@@ -7,15 +7,15 @@
 namespace gerenciadores {
     class GerenciadorColisoes {
     private:
-        std::list<Entidade*> entes_dinamicos;
-        std::list<Entidade*> entes_estaticos;
+        std::list<entidades::Entidade*> entes_dinamicos;
+        std::list<entidades::Entidade*> entes_estaticos;
 
     public:
-        Gerenciador_Colisoes();
-        Gerenciador_Colisoes();
-        void setDinamicos(Entidade* pE);
-        void setEstaticos(Entidade* pE);
-        void colisao(Entidade* ent, float dist_x, float dist_y, float size_x, float size_y, int id);
+        GerenciadorColisoes();
+        GerenciadorColisoes();
+        void setDinamicos(entidades::Entidade* pE);
+        void setEstaticos(entidades::Entidade* pE);
+        void colisao(entidades::Entidade* ent, float dist_x, float dist_y, float size_x, float size_y, int id);
 
     };
 }

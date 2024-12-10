@@ -1,0 +1,5 @@
+namespace personagens {
+    class Personagem {
+        
+    };
+}

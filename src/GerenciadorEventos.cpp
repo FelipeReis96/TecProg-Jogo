@@ -1,15 +1,15 @@
 #include "gerenciadores/GerenciadorEventos.hpp"
 
 namespace gerenciadores {
-Gerenciador_Eventos::Gerenciador_Eventos() {
+GerenciadorEventos::GerenciadorEventos() {
 
 }
 
-Gerenciador_Eventos::~Gerenciador_Eventos() {
+GerenciadorEventos::~GerenciadorEventos() {
 
 }
 
-void Gerenciador_Eventos::gerenciar() {
+void GerenciadorEventos::gerenciar() {
     if (pGG) {
         sf::Event evento;
         while (pGG->getJanela()->pollEvent(evento)) {

@@ -3,20 +3,21 @@
 
 
 Jogo::Jogo() {
-    GG = new gerenciadores::Gerenciador_Grafico();
+    pGG = new gerenciadores::GerenciadorGrafico();
+    pGE = new gerenciadores::GerenciadorEventos();
     executar();
 }
 
 Jogo::~Jogo() {
-    delete GG;
-    GG = NULL;  
+    delete pGG;
+    pGG = NULL;  
 }
 
 void Jogo::executar() {
-    if (GG) {
-        while(GG->getJanela()->isOpen()) {
-            GG->getJanela()->clear(sf::Color::White);
-            GG->getJanela()->display();
+    if (pGG) {
+        while(pGG->getJanela()->isOpen()) {
+            pGG->getJanela()->clear(sf::Color::White);
+            pGG->getJanela()->display();
         }
 
     }
