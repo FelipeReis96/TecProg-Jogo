@@ -1,5 +1,5 @@
 #pragma once
-#include "gerenciadores/GerenciadorGrafico.hpp"
+#include "GerenciadorGrafico.hpp"
 
 
 class Ente {

@@ -1,6 +1,7 @@
 #pragma once
 #include<SFML/Graphics.hpp>
 #include <map>
+#include "Jogador.hpp"
 
 #define LARGURA 900
 #define ALTURA 768
@@ -15,7 +16,7 @@ namespace gerenciadores {
         sf::VideoMode videoMode;
         static GerenciadorGrafico* instancia;
         GerenciadorGrafico();
-
+        entidades::personagens::Jogador* pJogador;
     public:
         ~GerenciadorGrafico();
 

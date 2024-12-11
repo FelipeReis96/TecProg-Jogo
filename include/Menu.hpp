@@ -1,6 +1,6 @@
-#pragma once
-#include "Ente.h"
-#include "MenuObserver.h"
+/*#pragma once
+#include "Ente.hpp"
+//#include "MenuObserver.h"
 
 
 namespace menus {
@@ -18,4 +18,4 @@ namespace menus {
         virtual void update() = 0;
         virtual void desenhar() = 0;
     };
-}
+}*/

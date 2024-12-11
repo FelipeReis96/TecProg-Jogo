@@ -3,6 +3,7 @@
 #include <list>
 #include "GerenciadorGrafico.hpp"
 #include "GerenciadorInput.hpp"
+#include "Jogador.hpp"
 
 namespace gerenciadores {
     class GerenciadorEventos {
@@ -11,6 +12,7 @@ namespace gerenciadores {
         static GerenciadorEventos* instancia;
         sf::Event evento;
         GerenciadorEventos();
+        entidades::personagens::Jogador* pJogador;
     public:
         ~GerenciadorEventos();
         void executar();

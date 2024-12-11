@@ -1,4 +1,4 @@
-#include "gerenciadores/GerenciadorInput.hpp"
+#include "GerenciadorInput.hpp"
 
 namespace gerenciadores {
     GerenciadorInput::GerenciadorInput() {

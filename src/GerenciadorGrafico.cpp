@@ -1,4 +1,4 @@
-#include "gerenciadores/GerenciadorGrafico.hpp"
+#include "GerenciadorGrafico.hpp"
 
 namespace gerenciadores {
     
@@ -48,6 +48,13 @@ void GerenciadorGrafico::close() {
 void GerenciadorGrafico::display() {
     if(janelaAberta())
         pJanela->display();
+}
+
+GerenciadorGrafico* GerenciadorGrafico::getInstancia(){
+    if (!instancia) {
+        instancia = new GerenciadorGrafico();
+    }
+    return instancia;
 }
 
 }

@@ -1,7 +1,7 @@
-#pragma once
+/*#pragma once
 #include <SFML/Graphics.hpp>
 #include "GerenciadorGrafico.hpp"
-#include "entidades/Entidade.hpp"
+#include "Entidade.hpp"
 #include <list>     
 
 namespace gerenciadores {
@@ -18,4 +18,4 @@ namespace gerenciadores {
         void colisao(entidades::Entidade* ent, float dist_x, float dist_y, float size_x, float size_y, int id);
 
     };
-}
+}*/

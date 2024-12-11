@@ -1,5 +1,5 @@
-namespace personagens {
+/*namespace personagens {
     class Personagem {
         
     };
-}
+}*/

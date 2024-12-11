@@ -1,4 +1,4 @@
-#include "gerenciadores/GerenciadorGrafico.hpp"
+#include "GerenciadorGrafico.hpp"
 #include "Jogo.hpp"
 
 

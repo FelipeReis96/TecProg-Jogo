@@ -1,5 +1,5 @@
-#include <SFML/Graphics.hpp>
-#include "personagens/Personagem.hpp"
+/*#include <SFML/Graphics.hpp>
+#include "Personagem.hpp"
 #include <SFML/System/Vector2.hpp>
 
 
@@ -15,4 +15,4 @@ namespace entidades {
             virtual void Obstacular(personagens::Personagem* pPersonagem) = 0;
         };
     };
-}
+}*/

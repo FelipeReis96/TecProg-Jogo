@@ -1,4 +1,4 @@
-#include <SFML/Graphics.hpp>
+/*#include <SFML/Graphics.hpp>
 
 namespace entidades {
     class Entidade {
@@ -12,4 +12,4 @@ namespace entidades {
         virtual void executar() = 0;
         virtual void desenhar() = 0;
     };
-}
+}*/

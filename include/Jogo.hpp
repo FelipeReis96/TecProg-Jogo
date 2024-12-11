@@ -1,9 +1,8 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 
-#include "gerenciadores/GerenciadorGrafico.hpp"
-#include "gerenciadores/GerenciadorEventos.hpp"
+#include "GerenciadorGrafico.hpp"
+#include "GerenciadorEventos.hpp"
 
 class Jogo {
 private:
